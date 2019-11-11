@@ -1,0 +1,2 @@
+# my_PKGBUILD
+個人のPKGBUILD置き場。
