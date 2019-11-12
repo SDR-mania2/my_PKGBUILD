@@ -59,11 +59,11 @@ prepare() {
   # msg2 "Patching with ck patchset..."
   # ck patchset itself
   # patch -Np1 -i ../"${_ckpatch}"
-  #こんな感じで。
-  #linux-ckはarch=(x86_64)なのでarmv7hでは使えないが参考になる。
-  #ここでは他にもオプションが設定可能。
-  #例えばMuQSSのカーネルパッチ「0001-MultiQueue-Skiplist-Scheduler-v0.195.patch」(http://ck.kolivas.org/patches/5.0/5.3/5.3-ck1/patches/) 
-  #などはマクロや関数名を眺めるだけでも面白い。linux-ckを使ったことはないので、どれくらいサクサクなのかは不明。
+  # こんな感じで。
+  # linux-ckはarch=(x86_64)なのでarmv7hでは使えないが参考になる。
+  # ここでは他にもオプションが設定可能。
+  # 例えばMuQSSのカーネルパッチ「0001-MultiQueue-Skiplist-Scheduler-v0.195.patch」(http://ck.kolivas.org/patches/5.0/5.3/5.3-ck1/patches/) 
+  # などはマクロや関数名を眺めるだけでも面白い。linux-ckを使ったことはないので、どれくらいサクサクなのかは不明。
   #
   
 }
@@ -78,8 +78,8 @@ build() {
   # Configure the kernel. Replace the line below with one of your choice.
   #make menuconfig # CLI menu for configuration
   #make nconfig # new CLI menu for configuration
-  #以下のみ修正(^^;)
-  #正確にはここからメニューを修正しないといけない。
+  # 以下のみ修正(^^;)
+  # 正確にはここからメニューを修正しないといけない。
   make xconfig # X-based configuration
   #make oldconfig # using old config from previous kernel version
   #make bcmrpi_defconfig # using RPi defconfig
