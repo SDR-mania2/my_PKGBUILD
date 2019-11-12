@@ -1,6 +1,7 @@
 #
-#以下はほぼlinux-raspberrypi 4.19.81-1のPKGBUILDそのまんまです。
-#カーネルビルドに必要な部分のみ修正してます。
+# 以下はほぼlinux-raspberrypi 4.19.81-1のPKGBUILDそのまんまです。
+# カーネルビルドに必要な部分のみ修正してます。
+# あとは筆者の雑談です。
 #
 
 
@@ -11,6 +12,8 @@
 buildarch=20
 
 pkgbase=linux-raspberrypi
+# ここをカスタムカーネルの名前に変える。
+
 _commit=bbdf44a11a065ebb2aa2ed5690b82287739b471d
 _srcname=linux-${_commit}
 _kernelname=${pkgbase#linux}
@@ -29,6 +32,8 @@ source=("https://github.com/raspberrypi/linux/archive/${_commit}.tar.gz"
         'linux.preset'
         '60-linux.hook'
         '90-linux.hook')
+        # ソフトウェアのソースの場所。ここを変更すれば簡単にマルウェアを仕込める。
+        
 md5sums=('0ba624c5e41ca072dd3af6502494eb3d'
          '7c6b37a1353caccf6d3786bb4161c218'
          '60bc3624123c183305677097bcd56212'
@@ -36,6 +41,7 @@ md5sums=('0ba624c5e41ca072dd3af6502494eb3d'
          '86d4a35722b5410e3b29fc92dae15d4b'
          'ce6c81ad1ad1f8b333fd6077d47abdaf'
          '69e1db90d78f691dc446fe2ab94727eb')
+        # ここも変えられたら大変。
 
 prepare() {
   cd "${srcdir}/${_srcname}"
@@ -47,6 +53,19 @@ prepare() {
 
   # don't run depmod on 'make install'. We'll do this ourselves in packaging
   sed -i '2iexit 0' scripts/depmod.sh
+  
+  #
+  # カーネルパッチをあてるときはこのprepare関数に書く。例えば、linux-ckのPKGBUILDでは以下のようになってる。
+  # msg2 "Patching with ck patchset..."
+  # ck patchset itself
+  # patch -Np1 -i ../"${_ckpatch}"
+  #こんな感じで。
+  #linux-ckはarch=(x86_64)なのでarmv7hでは使えないが参考になる。
+  #ここでは他にもオプションが設定可能。
+  #例えばMuQSSのカーネルパッチ「0001-MultiQueue-Skiplist-Scheduler-v0.195.patch」(http://ck.kolivas.org/patches/5.0/5.3/5.3-ck1/patches/) 
+  #などはマクロや関数名を眺めるだけでも面白い。linux-ckを使ったことはないので、どれくらいサクサクなのかは不明。
+  #
+  
 }
 
 build() {
