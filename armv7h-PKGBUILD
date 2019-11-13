@@ -101,6 +101,14 @@ build() {
   #yes "" | make config
 
   make ${MAKEFLAGS} zImage modules dtbs
+  #ここからmake開始。
+  #カーネルソース読むなら参考になるサイトは、
+  #https://kernelnewbies.org/や
+  #https://elixir.bootlin.com/linux/latest/sourceなど。
+  #/include/linux/pid.hや/include/linux/sched.hから始めると分かりやすそう。
+  #「Linuxカーネル2.6解読室」なんかもよさそうです。
+  
+  
 }
 
 _package() {
