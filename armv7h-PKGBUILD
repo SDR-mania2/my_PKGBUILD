@@ -68,7 +68,7 @@ prepare() {
   # 例えばMuQSSのカーネルパッチ「0001-MultiQueue-Skiplist-Scheduler-v0.195.patch」(http://ck.kolivas.org/patches/5.0/5.3/5.3-ck1/patches/) 
   # などはマクロや関数名を眺めるだけでも面白い。linux-ckを使ったことはないので、どれくらいサクサクなのかは不明。
   #
-  #arm用カーネルで動くかは不明だが、grsecurityなら
+  #arm用カーネルで動くかは不明だが、grsecurityのパッチなら
   #patch -p1 < ../grsecurity-2.....patch
   #みたいに書けばいい。grsecurityについては…いえ何でもありません。
   #
