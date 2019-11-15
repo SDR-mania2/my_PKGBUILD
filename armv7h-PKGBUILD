@@ -72,8 +72,8 @@ prepare() {
   # みたいに書けばいい。grsecurityについては…いえ何でもありません。
   #
   # セキュリティアドバイザリ(https://security.archlinux.org/advisory)を見ると、
-  # patchが転がってるときがあるので(ないときもあるが)上記と同様に当てれば、
-  # ソースコードから直接セキュリティパッチを当てることができる。
+  # patchが転がってるときがあるので(ないときもあるが)、上記と同様にすれば、
+  # ソースコードから直接セキュリティパッチを当てることができるはず。やったことないけど。
   # armならこのあたりとか。
   # https://github.com/archlinuxarm/PKGBUILDs/tree/master/core/linux-armv7)
   #
