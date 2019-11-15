@@ -67,10 +67,15 @@ prepare() {
   # ここでは他にもオプションが設定可能。
   # 例えばMuQSSのカーネルパッチ「0001-MultiQueue-Skiplist-Scheduler-v0.195.patch」(http://ck.kolivas.org/patches/5.0/5.3/5.3-ck1/patches/) 
   # などはマクロや関数名を眺めるだけでも面白い。linux-ckを使ったことはないので、どれくらいサクサクなのかは不明。
-  #
   # arm用カーネルで動くかは不明だが、grsecurityのパッチなら
   # patch -p1 < ../grsecurity-2.....patch
   # みたいに書けばいい。grsecurityについては…いえ何でもありません。
+  #
+  # セキュリティアドバイザリ(https://security.archlinux.org/advisory)を見ると、
+  # patchが転がってるときがあるので(ないときもあるが)上記と同様に当てれば、
+  # ソースコードから直接セキュリティパッチを当てることができる。
+  # armならこのあたりとか。
+  # https://github.com/archlinuxarm/PKGBUILDs/tree/master/core/linux-armv7)
   #
   
 }
