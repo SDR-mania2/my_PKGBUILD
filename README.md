@@ -34,6 +34,16 @@ straceでコマンドのスタックトレースをするには、
 
 *$ strace -p [pid]*
 
-などもできるらしい。
+などもできるらしい。KernelSharkを使うとさらにいろいろできる。
 
+参考にしたサイト
 
+<http://nopipi.hatenablog.com/entry/2015/12/20/195708>
+
+<https://yohgami.hateblo.jp/entry/20130105/1357409238>
+
+<http://blog.livedoor.jp/sonots/archives/18193659.html>
+
+<https://www.kkaneko.jp/tools/linuxtoolchain/tracecmd.html>
+
+<https://qiita.com/hana_shin/items/c9bff5f5265bed27bb9f>
