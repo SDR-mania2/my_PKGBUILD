@@ -28,10 +28,10 @@ trace.datファイルが作成されるので、以下のコマンドで表示�
 
 straceでスタックトレースをするには、
 
-*$strace ls /home/hoge/*
+*$ strace ls /home/hoge/*
 
 などどすれば、端末に表示されます。
 
-*strace -p [pid]*
+*$ strace -p [pid]*
 
 などもできるらしい。
