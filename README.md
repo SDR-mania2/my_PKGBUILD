@@ -9,5 +9,17 @@ Archを使うなら、カーネルビルドしてカスタムカーネルくら�
 しかし、debugfsがtracefsに移行したため、カーネルビルドは不要と判明。(古いカーネルでは多分必要)
 ということであまり意味はありませんが、ftraceでスタックトレースをしてみます。
 
-トレース画面なんぞをはりつける予定です。
+ftraceの使い方は簡単。trace-cmdを入れるだけ。以下はUbuntu系の例。
+
+*# apt-get install trace-cmd*
+
+lsコマンドについてトレースログを取得するには以下を実行。
+
+*$ sudo trace-cmd record -p function_graph ls*
+
+trace.datファイルが作成されるので、以下のコマンドで表示。
+
+*$ trace-cmd report | less*
+
+![トレースログ](https://user-images.githubusercontent.com/55984656/71972734-a0840300-3250-11ea-99ad-37c44af96fca.png)
 
