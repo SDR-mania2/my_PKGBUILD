@@ -26,7 +26,7 @@ trace.datファイルが作成されるので、以下のコマンドで表示�
 ![トレースログ](https://user-images.githubusercontent.com/55984656/71972734-a0840300-3250-11ea-99ad-37c44af96fca.png)
 
 
-straceでスタックトレースをするには、
+straceでコマンドのスタックトレースをするには、
 
 *$ strace ls /home/hoge/*
 
@@ -35,3 +35,5 @@ straceでスタックトレースをするには、
 *$ strace -p [pid]*
 
 などもできるらしい。
+
+
