@@ -17,11 +17,11 @@ lsコマンドについてトレースログを取得するには以下を実行
 
 *$ sudo trace-cmd record -p function_graph ls*
 
-trace.datファイルが作成されるので、以下のコマンドで表示。
+カレントディレクトリにtrace.datファイルが作成されるので、以下のコマンドで表示。
 
 *$ trace-cmd report | less*
 
-これはLinux Mint での実行結果。
+以下はLinux Mint での実行結果。
 
 ![トレースログ](https://user-images.githubusercontent.com/55984656/71972734-a0840300-3250-11ea-99ad-37c44af96fca.png)
 
@@ -36,7 +36,7 @@ straceでコマンドのスタックトレースをするには、
 
 などもできるらしい。KernelSharkを使うとさらにいろいろできる。
 
-参考にしたサイト
+以下のサイトを参考にしました。
 
 <http://nopipi.hatenablog.com/entry/2015/12/20/195708>
 
@@ -47,3 +47,8 @@ straceでコマンドのスタックトレースをするには、
 <https://www.kkaneko.jp/tools/linuxtoolchain/tracecmd.html>
 
 <https://qiita.com/hana_shin/items/c9bff5f5265bed27bb9f>
+
+別にCTFに興味があるわけでもないが、このあたりの話題はrev、pwnなどと関係してくる。ハリネズミ本や徳丸本などが参考になるらしい。gdbのbacktrace、gdb-peda、objdump、Ghidraなどがキーワードとして出てくる。CTFに興味ある人は調べてみればいいのでは。
+
+
+
