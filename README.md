@@ -13,15 +13,15 @@ ftraceの使い方は簡単。trace-cmdを入れるだけ。以下はUbuntu系�
 
 *# apt-get install trace-cmd*
 
-lsコマンドについてトレースログを取得するには以下を実行。
+lsコマンドについてトレースログを取得する。
 
 *$ sudo trace-cmd record -p function_graph ls*
 
-カレントディレクトリにtrace.datファイルが作成されるので、以下のコマンドで表示。
+カレントディレクトリにtrace.datファイルが作成されるので表示する。
 
 *$ trace-cmd report | less*
 
-以下はLinux Mint での実行結果。
+Linux Mint での実行結果。
 
 ![トレースログ](https://user-images.githubusercontent.com/55984656/71972734-a0840300-3250-11ea-99ad-37c44af96fca.png)
 
