@@ -48,7 +48,7 @@ straceでコマンドのスタックトレースをするには、
 
 <https://qiita.com/hana_shin/items/c9bff5f5265bed27bb9f>
 
-別にCTFに興味があるわけでもないが、このあたりの話題はrev、pwnなどと関係してくる。ハリネズミ本や徳丸本などが参考になるらしい。gdbのbacktrace、gdb-peda、objdump、Ghidraなどがキーワードとして出てくる。CTFに興味ある人は調べてみればいいのでは。
+別にCTFに興味があるわけでもないが、このあたりの話題はrev、pwnなどと関係してくる。ハリネズミ本や徳丸本、迷路本などが参考になるらしい。gdbのbacktrace、gdb-peda、objdump、Ghidraなどがキーワードとして出てくる。CTFに興味ある人は調べてみればいいのでは。
 
 
 
